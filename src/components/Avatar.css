@@ -1,0 +1,130 @@
+/* Overall container for the entire page */
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #007FFF, #F0F8FF);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+    width: 100%; /* Ensure it spans the entire width */
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px; /* Optional: limits width for better design */
+}
+
+.video-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px; /* Optional: limits width for better design */
+}
+
+.avatar-video, .avatar-audio {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+}
+
+.chat-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px; /* Optional: limits width for better design */
+}
+
+.chatHistory {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.chatHistory h3 {
+    margin-bottom: 10px;
+}
+
+.chatHistory ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.chatHistory li {
+    margin-bottom: 10px;
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbox textarea {
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+}
+
+.chatbox button {
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.chatbox-btn.send {
+    background-color: #007bff; /* Blue */
+}
+
+.restart-btn.start {
+    background-color: #28a745; /* Green */
+}
+
+.restart-btn.stop {
+    background-color: #dc3545; /* Red */
+}
+
+.restart-btn.listening {
+    background-color: #007bff; /* Blue for Listening */
+}
+
+.restart-btn.disabled, .chatbox-btn.send.disabled {
+    background-color: #6c757d; /* Gray */
+    cursor: not-allowed;
+}
+
+.restart-btn:disabled, .chatbox-btn.send:disabled {
+    opacity: 0.7;
+}
